@@ -4,7 +4,8 @@
 }
 html,
 body {
-  --gray: hsl(240, 9%, 89%);
+  --black: hsl(240, 6% 13%);
+  --grey: hsl(240, 9%, 89%);
 
   height: 100%;
   font-family: 'Roboto', sans-serif;
@@ -17,7 +18,7 @@ body {
 }
 
 main {
-  background-image: url('Images/Mobile.svg');
+  background-image: url(Images/Background.svg);
   width: 375px;
   height: 812px;
 }
@@ -28,14 +29,71 @@ main {
   margin-right: auto;
   text-align: center;
 
-  color: var(--gray);
+  color: var(--grey);
+}
+.avatar {
+  width: 10rem;
+  margin: 11.5rem auto 0;
+  position: relative;
+}
+.avatar span {
+  position: absolute;
+  top: -15px;
+  z-index: 1;
+}
+
+.avatar > img {
+  width: 10rem;
+  height: 11.5rem;
+  object-fit: contain;
+  clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
 }
 
 h1 {
   font-size: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.github {
+  padding-right: 0.5rem;
+}
+
+.top {
+  margin-top: 2.5rem;
+}
+.bottom {
+  margin-top: 1rem;
 }
 
 a {
-  color: black;
+  color: var(--grey);
   text-decoration: none;
+
+  margin-top: 0.25rem;
+
+  display: flex;
+  gap: 0, 0.75rem;
+
+  justify-content: center;
+  align-items: center;
+}
+
+p {
+  margin-top: 1rem;
+}
+ul {
+  margin-top: 2rem;
+  list-style: none;
+  padding: 0;
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+}
+
+img {
+  border-radius: 15px;
+}
+
+li:hover {
+  transform: translateY(-8px);
 }
